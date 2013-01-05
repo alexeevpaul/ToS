@@ -338,7 +338,7 @@ var ToS = {
 
 		// check money
 		if(count * this._inPrice > this._money) {
-			count = Math.round(this._money / this._inPrice);
+			count = Math.floor(this._money / this._inPrice);
 			if(count == 0) {
 				this.log(_Lang['Not enough money'], 'red');
 				return this;

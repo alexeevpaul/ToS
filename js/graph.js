@@ -2,8 +2,8 @@ var Graph = {
 
 	conf: {
 		height: 160,
-		width: 960,
-		columns: 64,
+		width: 512,
+		columns: 32,
 		cell: 16 // 1024 / 64
 	},
 
