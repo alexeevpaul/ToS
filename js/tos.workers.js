@@ -3,7 +3,7 @@ var ToSSeller = function(shop){
 	this.birthday = new Date();
 	this.experience = 0;
 	this.totalSold = 0;
-	this.cost = 30;
+	this.cost = 20;
 };
 
 ToSSeller.prototype = {

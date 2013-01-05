@@ -450,6 +450,7 @@ var ToS = {
 			for(var s in this._buildings) {
 				costs += this._buildings[s].getCosts();
 			}
+			this._money -= costs;
 			this.log('--------------' + '<br>' + _Lang.Day + ' ' + this._day + '<br>' + _Lang.Sales + ': ' + this.wWeight(this._daySales.sold) + ', ' + this.wCurrency(this._daySales.money) + '<br>' + _Lang.Costs + ': ' + this.wCurrency(costs) + '<br>' + _Lang.Profit + ': ' + this.wCurrency(this._daySales.money - costs) + '<br>--------------', 'yellow');
 			// clear data
 			this._daySales = {
