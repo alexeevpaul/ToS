@@ -75,7 +75,7 @@ var ToS = {
 			this._time = 0;
 			this._day++;
 			// -5%
-			this._product = Math.round(this._product * 0.95);
+			this._product = Math.floor(this._product * 0.95);
 		}
 		// clear buy stop
 		if(this._buyStop > 0){
@@ -339,7 +339,7 @@ var ToS = {
 		// check money
 		if(count * this._inPrice > this._money) {
 			count = Math.floor(this._money / this._inPrice);
-			if(count == 0) {
+			if(count <= 0 || this._money <= 0) {
 				this.log(_Lang['Not enough money'], 'red');
 				return this;
 			}
