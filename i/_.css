@@ -1,0 +1,247 @@
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	touch-callout: none;
+	user-select: none;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: #000;
+	color: #ececec;
+	font-family: Arial, Helvetica;
+	font-size: 14px;
+}
+
+h3 {
+	background-color: #222;
+	color: #009900;
+	margin-bottom: 2px;
+}
+
+a {
+	color: #009900;
+}
+
+.wrap {
+	position: relative;
+	width: 1024px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.header {
+	height: 70px;
+	background-color: #222;
+}
+
+.header h2 {
+	color: #00dd00;
+	height: 70px;
+	line-height: 70px;
+	padding-left: 10px;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.header h2 small {
+	color: #009900;
+}
+
+.log {
+	position: absolute;
+	right: 0;
+	left: 522px;
+	top: 80px;
+	bottom: 10px;
+	padding: 5px 2px;
+	background-color: #111;
+	color: #006600;
+	overflow: auto;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.log>p {
+	padding: 0 2px 4px;
+}
+
+.log .red {
+	color: #660000;
+}
+
+.log .yellow {
+	color: yellow;
+	opacity: 0.7;
+}
+
+.staff,
+.market,
+.buildings {
+	position: absolute;
+	z-index: 10;
+	top: 250px;
+	left: 0;
+	width: 512px;
+	height: 130px;
+	line-height: 25px;
+	/*background: #111;*/
+}
+
+.market > div {
+	float: left;
+	width: 256px;
+	overflow: hidden;
+	margin-bottom: 4px;
+}
+
+.market .input {
+	display: block;
+	float: left;
+	text-align: center;
+	height: 30px;
+	width: 81px;
+	line-height: 30px;
+	cursor: default;
+	color: #000;
+	border: 1px solid #333;
+	background-color: #fff;
+	border-left: none;
+}
+
+#buyControls {
+	clear: both;
+	width: 512px;
+	position: relative;
+	top: 5px;
+}
+
+.buildings {
+	top: 390px;
+	height: 90px;
+}
+
+.buildings>div, .staff>div {
+	float: left;
+	width: 256px;
+}
+
+.staff {
+	top: 490px;
+	height: 90px;
+}
+
+.timeControl {
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	right: 10px;
+}
+
+.btn,
+.btnActive {
+	display: block;
+	float: left;
+	height: 30px;
+	padding: 0 15px;
+	line-height: 30px;
+	cursor: pointer;
+	color: #000;
+	border: 1px solid #333;
+	background-color: #bbb;
+	border-left: none;
+}
+
+.btn:first-child, .btnActive:first-child {
+	border-left: 1px solid #333;
+}
+
+.btnActive {
+	background-color: #fff;
+}
+
+#graph {
+	position: absolute;
+	z-index: 2;
+	top: 80px;
+	left: 0;
+	background: #222;
+	height: 160px;
+	border-left: 1px solid #004400;
+	border-bottom: 1px solid #004400;
+}
+
+.legend {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	height: 20px;
+	background-color: rgba(0,0,0,0.3);
+	opacity: 0.8;
+}
+
+.legend>span {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	font-size: 12px;
+}
+
+.legend>span>b {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+}
+
+.legend>span>b.yellow {
+	background-color: yellow;
+}
+
+.legend>span>b.green {
+	background-color: green;
+}
+
+.graphInPrice {
+	position: absolute;
+	z-index: 3;
+	bottom: 5px;
+	right: 5px;
+	padding: 3px;
+	color: #008800;
+	text-shadow: 0 0 3px #000;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Lucida Console", Monaco, monospace;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.graphOutPrice {
+	position: absolute;
+	z-index: 3;
+	bottom: 5px;
+	left: 5px;
+	padding: 3px;
+	color: yellow;
+	text-shadow: 0 0 3px #000;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "Lucida Console", Monaco, monospace;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.light {
+	color: #888;
+}

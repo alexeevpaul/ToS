@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="i/_.css" />
+		<script src="data/lang.ru.js"></script>
+		<script src="js/graph.js"></script>
+		<script src="js/tos.buildings.js"></script>
+		<script src="js/tos.workers.js"></script>
+		<script src="js/tos.js"></script>
+	</head>
+	<body onload="ToS.init()">
+		<div class="wrap">
+			<div class="header">
+				<h2><small><tt>Day</tt> <span id="day">1</span>, <span id="dayName"></span>, <span id="time">06:00</span>,</small> <span id="money">$200</span></h2>
+				<div class="timeControl">
+					<span class="btn" state="Pause" id="btnPause">1</span>
+					<span class="btn" state="Play" id="btnPlay">2</span>
+					<span class="btn" state="Fast" id="btnFast">3</span>
+					<span class="btn" state="Turbo" id="btnTurbo">4</span>
+				</div>
+			</div>
+			<div class="log" id="logList"></div>
+			<div class="market">
+				<h3><tt>Warehouse</tt></h3>
+				<div>
+					<tt>Capacity</tt>: <span id="capacity">200</span>
+				</div>
+				<div>
+					<tt>Used</tt>: <span id="product">200</span>
+				</div>
+				<div>
+					<tt>Average cost</tt>: <span id="cprice">0</span>
+				</div>
+				<div id="buyControls">
+					<span class="btn" id="btnBuy" action="buy"><tt>Buy</tt></span>
+					<span class="btn" action="buyDec">-</span>
+					<span class="input" id="buyValue">100</span>
+					<span class="btn" action="buyInc">+</span>
+					<span class="btn" id="btnStop" action="stop"><tt>Stop trading</tt></span>
+				</div>
+			</div>
+			<div class="buildings">
+				<h3><tt>Warehouses and stores</tt></h3>
+				<div>
+					<tt>Small shops</tt>: <span id="SmallShops">1</span> <a href="#" action="addSmallShop">+1</a>
+				</div>
+				<div class="light">
+					<tt>Shops</tt>: <span id="Shops">0</span> (<tt>comming soon</tt>)
+				</div>
+				<div class="light">
+					<tt>Warehouses</tt>: <span id="Warehouses">0</span> (<tt>comming soon</tt>)
+				</div>
+			</div>
+			<div class="staff">
+				<h3><tt>Staff</tt></h3>
+				<div>
+					<tt>Sellers</tt>: <span id="Sellers">1</span> <a href="#" action="addSeller">+1</a>
+				</div>
+				<div class="light">
+					<tt>Managers</tt>: <span id="Managers">0</span> (<tt>comming soon</tt>)
+				</div>
+				<div class="light">
+					<tt>Accountants</tt>: <span id="Accountants">0</span> (<tt>comming soon</tt>)
+				</div>
+			</div>
+			<div id="graph">
+				<div class="legend">
+					<span><b class="yellow"></b> - <tt>selling price</tt></span>
+					<span><b class="green"></b> - <tt>purchase price</tt></span>
+					<span><b class="red"></b> - <tt>buying activity</tt></span>
+				</div>
+				<div class="graphOutPrice" id="outprice">0</div>
+				<div class="graphInPrice" id="inprice">0</div>
+			</div>
+		</div>
+	</body>
+</html>
