@@ -418,12 +418,12 @@ var ToS = {
 
 	calculationSales: function() {
 		// check work time
-		if(this.conf.startWorkTime > this._time || this.conf.endWorkTime < this._time || this._buyStop > 0) {
+		if(this.conf.startWorkTime > this._time || this.conf.endWorkTime < this._time) {
 			// hide buy buttons
 			document.getElementById('buyControls').style.display = 'none';
 			return this;
 		}
-		if((this._day - 1) % 7 > 4){
+		if((this._day - 1) % 7 > 4 || this._buyStop > 0){
 			document.getElementById('buyControls').style.display = 'none';
 		}
 		// shops
